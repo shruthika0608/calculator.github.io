@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Animation</title>
+</head>
+
+<style>
+    #animate{
+        width: 500px;
+        height: 450px;
+        position: relative;
+        animation-name: image;
+        animation-duration: 4s;
+
+    }
+
+    #animate:hover{
+        width: 700px;
+    }
+
+    @keyframes image {
+        0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+        
+    }
+    
+</style>
+<body>
+
+
+    <div id="animate">
+        <img src="catt.png" width="400" height="410"alt="cat" />
+        <p style="font-size: small;color: aliceblue;font-weight: 100;">chipi chipi</p>
+    </div>
+
+
+</body>
+</html>
