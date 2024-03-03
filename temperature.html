@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Temperature Convertor</title>
+</head>
+<body>
+    <style>
+        body{
+   background-color: black;
+   display: grid;
+   height: 50vh;
+   place-items: center;
+  }
+
+  .main{
+    border-radius: 5px;
+      
+      padding: 70px;
+      background: #d3d3d3;
+      
+  }
+#res,#ans {
+      height: 45px;
+      width: 260px;
+      
+      font-size: 20px;
+      border-radius: 8px;
+      padding-left: 15px;
+  }
+
+ input[type=button]{
+    height: 40px;
+      width: 200px;
+      font-size: 20px;
+      border-radius: 8px;
+      text-align: center;
+      background-color: rgb(115, 82, 82);
+
+  }
+  select {
+      height: 45px;
+      width: 400px;
+      border-radius: 8px;
+      font-size: 19px;
+      text-align: center;
+      
+  }
+
+  #opt{place-items: center;}
+        
+    </style>
+<h1 style="color: aliceblue;">TEMPERATURE CONVERTOR</h1>
+    <div class="main">
+    
+    
+    <select id="opt">
+
+        <option value="f">Celcius to Farenheit</option>
+        <option value="c">Farenheit to Celcius</option>
+    </select><br><br>
+
+<input type="text" id = 'res' placeholder="Input">
+    
+<input type="button" value = 'Convert' onclick = "Farenheit()"><br>
+<input id="ans" type="text" placeholder="Output" >
+ 
+<input type="button" value = 'Clear' onclick = "Clear()">
+</div>
+<script >
+    function Farenheit(){
+    var v = parseInt(document.getElementById("res").value);
+    var option = document.getElementById("opt").value;
+        
+    if(option == "f")
+        {
+        var sol = (((v)*9)/5)+32;
+        }
+    else if(option == "c")
+        {
+        var sol =(((v)-32)*5)/9;
+        }
+    document.getElementById("ans").value=sol;
+
+}
+function Clear(){
+    var inp = document.getElementById('res');
+    var otp=document.getElementById('ans');
+    inp.value = '';
+    otp.value='';
+}
+
+</script>
+
+
+</body>
+</html>
